@@ -1,9 +1,6 @@
 FROM tensorflow/tensorflow
 
-RUN apk add --update \
-  build-base \
-  && pip install sacredboard \
-  && rm -rf /var/cache/apk/*
+RUN pip install sacredboard
 
 EXPOSE 5000
 
