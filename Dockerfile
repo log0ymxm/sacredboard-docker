@@ -1,6 +1,9 @@
-FROM tensorflow/tensorflow
+FROM python:3.5-alpine
 
-RUN pip install sacredboard
+RUN apk add --update \      RUN apk add --update \
+   build-base \       build-base \
+   && pip install sacredboard \
+   && rm -rf /var/cache/apk/*
 
 EXPOSE 5000
 
