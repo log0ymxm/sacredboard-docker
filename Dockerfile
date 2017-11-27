@@ -1,7 +1,7 @@
 FROM python:3.5-alpine
 
-RUN apk add --update \      RUN apk add --update \
-   build-base \       build-base \
+RUN apk add --update \
+   build-base \
    && pip install sacredboard \
    && rm -rf /var/cache/apk/*
 
